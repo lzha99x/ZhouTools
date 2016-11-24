@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PasswordInputBox">
+        <attr name="boxSize" format="integer" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="defaultBoxColor" format="color" />
+        <attr name="selectBoxColor" format="color" />
+        <attr name="boxPadding" format="dimension" />
+        <attr name="boxType">
+            <enum name="fill" value="0" />
+            <enum name="stroke" value="1" />
+        </attr>
+        <attr name="strokeWidth" format="float" />
+        <attr name="strokeColor" format="color" />
+        <attr name="roundBox" format="boolean" />
+        <attr name="showPwd" format="boolean" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+
+    lintOptions {
+        abortOnError false
+    }
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+
+    tasks.withType(Javadoc) {
+        options {
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api/"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+publish {
+    // API Key 71196934a71540d79e036672ec140b6923e428bb
+    userOrg = 'knife'       // bintray.com的用户名
+    groupId = 'com.knife'   // jcenter上的路径
+    artifactId = 'tools'    // 项目名称
+    publishVersion = '1.0'  // 版本号
+    desc = 'zhou tools';    // 描述.不重要
+    website = 'https://github.com/chuwuwang' // 网站.不重要
+    // 下面的命令是上传到bintray上面
+    // gradlew clean build bintrayUpload -PbintrayUser=chuwuwang -PbintrayKey=71196934a71540d79e036672ec140b6923e428bb -PdryRun=false
+}
