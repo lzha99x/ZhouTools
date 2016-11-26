@@ -41,7 +41,7 @@ publish {
     userOrg = 'knife'       // bintray.com的用户名
     groupId = 'com.knife'   // jcenter上的路径
     artifactId = 'tools'    // 项目名称
-    publishVersion = '1.0'  // 版本号
+    publishVersion = '1.1'  // 版本号
     desc = 'zhou tools';    // 描述.不重要
     website = 'https://github.com/chuwuwang' // 网站.不重要
     // 下面的命令是上传到bintray上面
