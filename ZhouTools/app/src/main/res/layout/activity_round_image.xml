@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:nsz="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <com.geek.widget.RoundImageView
+        android:id="@+id/image_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="changePicture"
+        android:src="@drawable/src"
+        nsz:borderWidth="2.2"
+        nsz:roundType="circle" />
+
+    <com.geek.widget.RoundImageView
+        android:id="@+id/image_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="resetType"
+        android:src="@drawable/src"
+        nsz:roundType="rect" />
+
+    <com.geek.widget.RoundImageView
+        android:id="@+id/image_radius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="changeRadius"
+        android:src="@drawable/src"
+        nsz:roundType="rect" />
+
+    <com.geek.widget.RoundImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/src"
+        nsz:radius="30dp"
+        nsz:roundType="rect" />
+
+</LinearLayout>

@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">ZhouToolsDemo</string>
+
+    <string name="app_name">ToolsDemo</string>
+
+    <string name="round_picture">圆形图片</string>
+
 </resources>

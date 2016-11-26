@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- 密码框 -->
     <declare-styleable name="PasswordInputBox">
         <attr name="boxSize" format="integer" />
         <attr name="textSize" format="dimension" />
@@ -16,6 +17,17 @@
         <attr name="strokeColor" format="color" />
         <attr name="roundBox" format="boolean" />
         <attr name="showPwd" format="boolean" />
+    </declare-styleable>
+
+    <!-- 圆形ImageView -->
+    <declare-styleable name="RoundImageView">
+        <attr name="radius" format="dimension" />
+        <attr name="roundType">
+            <enum name="rect" value="0" />
+            <enum name="circle" value="1" />
+        </attr>
+        <attr name="borderWidth" format="float" />
+        <attr name="borderColor" format="color" />
     </declare-styleable>
 
 </resources>

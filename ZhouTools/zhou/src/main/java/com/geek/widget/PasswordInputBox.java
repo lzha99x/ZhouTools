@@ -21,7 +21,7 @@ import java.util.LinkedList;
 /**
  * 密码输入框
  *
- * @author lee.shenzhou
+ * @author leeshenzhou on 2016/11/22.
  */
 public class PasswordInputBox extends View {
 
