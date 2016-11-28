@@ -59,6 +59,6 @@ QQ：645521797
 
 compile 'com.knife:tools:1.2
 
-// 这个l依赖地址有时忘记更新了，但我一定会上传到jcenter上，只要修改下版本号即可。
+// 这个依赖地址有时忘记更新了，但我一定会上传到jcenter上，只要修改下版本号即可。
 // jcenter访问地址：https://jcenter.bintray.com/com/knife/
 ```
