@@ -23,7 +23,7 @@ QQ：645521797
 	 // nsz:textColor 文字颜色
 	 // nsz:textSize 文字大小
 	 // nsz:roundBox 是否为圆角密码框,默认为直角
-	 // nsz:shownsz 输入的文字是否显示,默认不显示
+	 // nsz:shownpwd 输入的文字是否显示,默认不显示
 	 // nsz:boxPadding 密码框之间的间距,默认为0
 	 // nsz:boxRadius 圆角的大小,默认为10
 	 
