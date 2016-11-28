@@ -1,7 +1,10 @@
-# ZhouTools
+# ZhouTools(常用的一些自定义控件)
+
 This is a good android tools library.
 
 博客地址：http://blog.csdn.net/u012301841
+
+QQ：645521797
 
 ## 密码框
 ```
@@ -54,7 +57,8 @@ This is a good android tools library.
 ## Android Studio 引用
 ```
 
-compile 'com.knife:tools:1.1'
+compile 'com.knife:tools:1.2
 
+// 这个l依赖地址有时忘记更新了，但我一定会上传到jcenter上，只要修改下版本号即可。
 // jcenter访问地址：https://jcenter.bintray.com/com/knife/
 ```
