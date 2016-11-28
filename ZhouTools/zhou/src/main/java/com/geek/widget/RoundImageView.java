@@ -51,6 +51,8 @@ public class RoundImageView extends ImageView {
 
     private RectF mRectF;
 
+    private RectF mBorderRectF;
+
     private Paint mPicPaint;
 
     private Paint mBorderPaint;
@@ -124,11 +126,16 @@ public class RoundImageView extends ImageView {
     }
 
     @Override
-    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        super.onSizeChanged(w, h, oldw, oldh);
+    protected void onSizeChanged(int w, int h, int oldW, int oldH) {
+        super.onSizeChanged(w, h, oldW, oldH);
 
         if (roundType != ROUND_TYPE_CIRCLE) {
-            mRectF = new RectF(0, 0, getWidth(), getHeight());
+            if (borderWidth <= 0) {
+                mRectF = new RectF(0, 0, getWidth(), getHeight());
+            } else {
+                mRectF = new RectF(0, 0, getWidth() - borderWidth, getHeight() - borderWidth);
+                mBorderRectF = new RectF(0, 0, getWidth(), getHeight());
+            }
         }
     }
 
@@ -155,6 +162,9 @@ public class RoundImageView extends ImageView {
 
         setUpShader(drawable, canvas);
 
+        mBorderPaint.setStrokeWidth(borderWidth);
+        mBorderPaint.setColor(borderColor);
+
         if (roundType == ROUND_TYPE_CIRCLE) {
             // 画圆形
             if (borderWidth <= 0) {
@@ -162,14 +172,19 @@ public class RoundImageView extends ImageView {
             } else {
                 canvas.drawCircle(radius, radius, radius - borderWidth,
                         mPicPaint);
-                mBorderPaint.setStrokeWidth(borderWidth);
-                mBorderPaint.setColor(borderColor);
                 // 画边线
                 canvas.drawCircle(radius, radius, radius, mBorderPaint);
             }
         } else {
-            // 画圆角矩形
-            canvas.drawRoundRect(mRectF, radius, radius, mPicPaint);
+            if (borderWidth <= 0) {
+                // 画圆角矩形
+                canvas.drawRoundRect(mRectF, radius, radius, mPicPaint);
+            } else {
+                // 画圆角矩形
+                canvas.drawRoundRect(mRectF, radius, radius, mPicPaint);
+                // 画边线
+                canvas.drawRoundRect(mBorderRectF, radius, radius, mBorderPaint);
+            }
         }
 
     }

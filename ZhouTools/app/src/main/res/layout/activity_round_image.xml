@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:onClick="changePicture"
         android:src="@drawable/src"
-        nsz:borderWidth="2.2"
+        nsz:borderWidth="1.5"
         nsz:roundType="circle" />
 
     <com.geek.widget.RoundImageView
@@ -38,6 +38,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
         android:src="@drawable/src"
+        nsz:borderWidth="1.2"
         nsz:radius="30dp"
         nsz:roundType="rect" />
 

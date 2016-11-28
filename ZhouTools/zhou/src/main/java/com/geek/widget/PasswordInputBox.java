@@ -45,9 +45,10 @@ public class PasswordInputBox extends View {
     // 密码框之间的间距
     private int padding;
 
+    private float radius;
+
     // 密码框类型
     private int boxType;
-
     public static final int BOX_TYPE_FILL = 0;
     public static final int BOX_TYPE_STROKE = 1;
 
@@ -99,12 +100,12 @@ public class PasswordInputBox extends View {
         padding = a.getDimensionPixelSize(
                 R.styleable.PasswordInputBox_boxPadding, 0);
         boxType = a.getInt(R.styleable.PasswordInputBox_boxType, 0);
-        strokeWidth = a
-                .getFloat(R.styleable.PasswordInputBox_strokeWidth, 1.0f);
+        strokeWidth = a.getFloat(R.styleable.PasswordInputBox_strokeWidth, 1.5f);
         strokeColor = a.getColor(R.styleable.PasswordInputBox_strokeColor,
                 Color.GRAY);
         isRoundBox = a.getBoolean(R.styleable.PasswordInputBox_roundBox, false);
         isShowPwd = a.getBoolean(R.styleable.PasswordInputBox_showPwd, false);
+        radius = a.getFloat(R.styleable.PasswordInputBox_boxRadius, 10.0f);
 
         a.recycle();
 
@@ -130,8 +131,7 @@ public class PasswordInputBox extends View {
      */
     public String getInputText() {
         String text = "";
-        Iterator<String> iterator = inputList.iterator();
-        while (iterator.hasNext()) {
+        for (Iterator<String> iterator = inputList.iterator(); iterator.hasNext(); ) {
             String str = iterator.next();
             text += str;
         }
@@ -162,13 +162,11 @@ public class PasswordInputBox extends View {
                 mPaint.setStyle(Style.STROKE);
                 mPaint.setColor(strokeColor);
                 if (isRoundBox) {
-                    canvas.drawRoundRect(new RectF(
-                                    padding * i + childWidth * i, 0, childWidth
-                                    * (i + 1) + padding * i, height), 10, 10,
-                            mPaint);
+                    canvas.drawRoundRect(new RectF(padding * i + childWidth * i, 0,
+                            childWidth * (i + 1) + padding * i, height), radius, radius, mPaint);
                 } else {
-                    canvas.drawRect(padding * i + childWidth * i, 0, childWidth
-                            * (i + 1) + padding * i, height, mPaint);
+                    canvas.drawRect(padding * i + childWidth * i, 0,
+                            childWidth * (i + 1) + padding * i, height, mPaint);
                 }
             } else {
                 // 设置画笔为实心
@@ -178,8 +176,13 @@ public class PasswordInputBox extends View {
                 } else {
                     mPaint.setColor(selectColor);
                 }
-                canvas.drawRect(padding * i + childWidth * i, 0, childWidth
-                        * (i + 1) + padding * i, height, mPaint);
+                if (isRoundBox) {
+                    canvas.drawRoundRect(new RectF(padding * i + childWidth * i, 0,
+                            childWidth * (i + 1) + padding * i, height), radius, radius, mPaint);
+                } else {
+                    canvas.drawRect(padding * i + childWidth * i, 0,
+                            childWidth * (i + 1) + padding * i, height, mPaint);
+                }
             }
 
             // 绘制文字

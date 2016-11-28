@@ -8,6 +8,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
+        android:onClick="openPasswordInputBox"
+        android:text="@string/password_input_box"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
         android:onClick="openRoundPicture"
         android:text="@string/round_picture"
         android:textSize="20sp" />

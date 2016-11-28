@@ -17,6 +17,7 @@
         <attr name="strokeColor" format="color" />
         <attr name="roundBox" format="boolean" />
         <attr name="showPwd" format="boolean" />
+        <attr name="boxRadius" format="float" />
     </declare-styleable>
 
     <!-- 圆形ImageView -->

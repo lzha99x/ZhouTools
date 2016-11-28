@@ -17,6 +17,11 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
+    public void openPasswordInputBox(View view) {
+        Intent intent = new Intent(this, PasswordInputBoxActivity.class);
+        startActivity(intent);
+    }
+
     public void openRoundPicture(View view) {
         Intent intent = new Intent(this, RoundImageViewActivity.class);
         startActivity(intent);
