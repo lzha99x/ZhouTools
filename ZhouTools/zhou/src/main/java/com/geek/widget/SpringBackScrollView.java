@@ -197,7 +197,10 @@ public class SpringBackScrollView extends ScrollView {
 	 * 是否需要移动布局
 	 */
 	public boolean isNeedMove() {
-		// 子View的margin和自己的padding对移动有影响	
+		// 注意：慎重选择
+		// 子View的margin和自己的padding对移动有影响,所以子View最好不要设置marginTop和marginBottom。
+		// 如果设置了，对判断滑动到底部有些不准确，需要加上下面注释掉margin值，但是不同的机器，测试出有点不一样。
+
 		// 获取到子View的margin值
 		// LayoutParams params = (LayoutParams) childView.getLayoutParams();
 		// int topMargin = params.topMargin;
