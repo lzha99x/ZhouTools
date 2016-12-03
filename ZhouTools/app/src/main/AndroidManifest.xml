@@ -18,6 +18,10 @@
         <activity android:name=".PasswordInputBoxActivity" />
 
         <activity android:name=".RoundImageViewActivity" />
+        
+        <activity android:name=".SpringBackListViewActivity"/>
+        
+        <activity android:name=".SpringBackScrollViewActivity"/>
 
     </application>
 

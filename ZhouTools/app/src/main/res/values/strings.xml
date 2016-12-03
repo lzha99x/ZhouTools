@@ -4,6 +4,8 @@
 
     <string name="password_input_box">密码框</string>
     <string name="round_picture">圆形图片</string>
+    <string name="spring_back_list_view">回弹的ListView</string>
+    <string name="spring_back_scroll_view">回弹的ScrollView</string>
 
     <string name="input_pwd">输入</string>
     <string name="show_pwd">显示密码</string>

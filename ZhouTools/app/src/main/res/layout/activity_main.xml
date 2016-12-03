@@ -20,5 +20,21 @@
         android:text="@string/round_picture"
         android:textSize="20sp" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:onClick="openSpringBackListView"
+        android:text="@string/spring_back_list_view"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:onClick="openSpringBackScrollView"
+        android:text="@string/spring_back_scroll_view"
+        android:textSize="20sp" />
+
 
 </LinearLayout>

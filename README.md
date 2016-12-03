@@ -54,10 +54,25 @@ QQ：645521797
 ![image](https://github.com/chuwuwang/ZhouTools/blob/master/Screenshots/201611262350.png)
 ![image](https://github.com/chuwuwang/ZhouTools/blob/master/Screenshots/201611262351.png)
 
+## 带下拉和上拉回弹的ListView和ScrollView
+```
+	/**
+     * 设置回弹的速度。值越大,速度越快。
+     */
+    public void setSpringBackSpeed(int speed) {
+        if (speed <= 0) {
+            throw new RuntimeException("speed 不能小于或者等于0");
+        }
+        this.speed = speed;
+    }
+```
+![image](https://github.com/chuwuwang/ZhouTools/blob/master/Screenshots/201612031330.png)
+![image](https://github.com/chuwuwang/ZhouTools/blob/master/Screenshots/201612031331.png)
+
 ## Android Studio 引用
 ```
 
-compile 'com.knife:tools:1.2
+compile 'com.knife:tools:1.3
 
 // 这个依赖地址有时忘记更新了，但我一定会上传到jcenter上，只要修改下版本号即可。
 // jcenter访问地址：https://jcenter.bintray.com/com/knife/

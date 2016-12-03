@@ -27,4 +27,14 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    public void openSpringBackListView(View view) {
+        Intent intent = new Intent(this, SpringBackListViewActivity.class);
+        startActivity(intent);
+    }
+
+    public void openSpringBackScrollView(View view) {
+        Intent intent = new Intent(this, SpringBackScrollViewActivity.class);
+        startActivity(intent);
+    }
+
 }
