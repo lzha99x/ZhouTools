@@ -2,39 +2,67 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/cyan_deepen_700"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:onClick="openPasswordInputBox"
-        android:text="@string/password_input_box"
-        android:textSize="20sp" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:onClick="openRoundPicture"
-        android:text="@string/round_picture"
-        android:textSize="20sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:onClick="openPasswordInputBox"
+            android:text="@string/password_input_box"
+            android:textSize="14sp" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:onClick="openSpringBackListView"
-        android:text="@string/spring_back_list_view"
-        android:textSize="20sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:onClick="openRoundPicture"
+            android:text="@string/round_picture"
+            android:textSize="14sp" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:onClick="openSpringBackScrollView"
-        android:text="@string/spring_back_scroll_view"
-        android:textSize="20sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:onClick="openSpringBackListView"
+            android:text="@string/spring_back_list_view"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:onClick="openSpringBackScrollView"
+            android:text="@string/spring_back_scroll_view"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:onClick="openLoadingDialog"
+            android:text="@string/load_dialog"
+            android:textSize="14sp" />
+
+    </LinearLayout>
 
 
 </LinearLayout>

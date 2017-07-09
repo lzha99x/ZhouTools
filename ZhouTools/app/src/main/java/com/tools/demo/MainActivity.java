@@ -10,7 +10,6 @@ import android.view.View;
  */
 public class MainActivity extends Activity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +33,11 @@ public class MainActivity extends Activity {
 
     public void openSpringBackScrollView(View view) {
         Intent intent = new Intent(this, SpringBackScrollViewActivity.class);
+        startActivity(intent);
+    }
+
+    public void openLoadingDialog(View view) {
+        Intent intent = new Intent(this, LoadingDialogActivity.class);
         startActivity(intent);
     }
 

@@ -60,6 +60,7 @@ public class SpringBackScrollView extends ScrollView {
 
 	@Override
 	protected void onFinishInflate() {
+		super.onFinishInflate();
 		childView = getChildAt(0);
 		if (childView != null) {
 			normal.set(childView.getLeft(), childView.getTop(), childView.getRight(), childView.getBottom());

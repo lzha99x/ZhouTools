@@ -19,7 +19,7 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ImageView;
 
-import com.geek.tools.R;
+import com.geek.utils.R;
 
 
 /**

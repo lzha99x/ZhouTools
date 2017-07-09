@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 25
     buildToolsVersion "24.0.3"
 
     lintOptions {
@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
@@ -43,7 +43,7 @@ publish {
     groupId = 'com.knife'   // jcenter上的路径
     artifactId = 'tools'    // 项目名称
     publishVersion = '1.3'  // 版本号
-    desc = 'zhou tools';    // 描述.不重要
+    desc = 'android tools'; // 描述.不重要
     website = 'https://github.com/chuwuwang' // 网站.不重要
     // 下面的命令是上传到bintray上面
     // gradlew clean build bintrayUpload -PbintrayUser=chuwuwang -PbintrayKey=71196934a71540d79e036672ec140b6923e428bb -PdryRun=false

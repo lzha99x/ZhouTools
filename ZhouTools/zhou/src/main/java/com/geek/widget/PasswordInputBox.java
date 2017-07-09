@@ -13,7 +13,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
-import com.geek.tools.R;
+import com.geek.utils.R;
 
 import java.util.Iterator;
 import java.util.LinkedList;
