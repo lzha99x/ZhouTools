@@ -20,6 +20,7 @@
         <activity android:name=".SpringBackListViewActivity" />
         <activity android:name=".SpringBackScrollViewActivity" />
         <activity android:name=".LoadingDialogActivity" />
+        <activity android:name=".LoadingBarActivity" />
 
     </application>
 

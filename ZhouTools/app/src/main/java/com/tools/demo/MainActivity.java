@@ -41,4 +41,9 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    public void openLoadingBar(View view) {
+        Intent intent = new Intent(this, LoadingBarActivity.class);
+        startActivity(intent);
+    }
+
 }
